@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>War V_1</title>
-  </head>
-  <body>
-    <h1>War Version 1</h1>
-    <script type="module" src="main.js"></script>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Week 6 Final Coding Assignment</title>
+      <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+      <style>
+        body
+        {margin: 35px;
+        font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      </style>
+   </head>
+   <body>
+      <div class="assignment-text">
+      <h2>Week 06 Coding Assignment</h2>
+      <h3>War: Classic Card Game</h3>
+      <p>Author: Patrick Murray</p>
+      <p><a href="./tests.html"><h3>Load Test Results</h3></a></p>
+      
+      <script type="module" src="main.js"></script>
+
+      <h3>Instructions:</h3>
+      <ul>
+         <li>
+            In Visual Studio Code, write the code that accomplishes the
+            objectives listed below and ensures that the code compiles and runs
+            as directed.
+         </li>
+         <li>
+            Create a new repository on GitHub for this week's assignments and
+            push this document, with your project code, to the repository. •
+            Include the URLs for this week's repository and video where
+            instructed.
+         </li>
+         <li>Submit this document as a .PDF file in the LMS.</li>
+      </ul>
+      <h3>Coding Steps:</h3>
+      <ul>
+         <li>
+            For the final project you will be creating an automated version of
+            the classic card game WAR! There are many versions of the game WAR.
+            In this version there are only 2 players.
+            <ul>
+               <li>
+                  You do not need to do anything special when there is a tie in
+                  a round.
+               </li>
+            </ul>
+         </li>
+         <li>
+            Think about how you would build this project and write your plan
+            down. Consider classes such as: Card, Deck, Player, as well as what
+            properties and methods they may include.
+            <ul>
+               <li>
+                  You do not need to accept any user input, when you run your
+                  code, the entire game should play out instantly without any
+                  user input inside of your browser's console.
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <h3>The completed project should, when executed, do the following:</h3>
+      <ul>
+         <li>
+            Deal 26 Cards to each Player from a Deck of 52 cards. 
+            <li>
+            Iterate through the turns where each Player plays a Card.</li>
+         </li>
+         <li>The Player who played the higher card is awarded a point</li>
+         <ul>
+            <li>Ties result in zero points for both Players.</li>
+         </ul>
+         <li>
+            After all cards have been played, display the score and declare the
+            winner.
+         </li>
+         <li>
+            Write a Unit Test using Mocha and Chai for at least one of the
+            functions you write.
+         </li>
+      </ul>
+      </div>
+   </body>
 </html>
