@@ -305,19 +305,19 @@ describe('Deck Test Cases', () => {
    describe('Initialise Deck and deal a Card', () => {
       it('#Should contain 52 cards when new Deck is created', () => {
          testDeck.resetDeck();
-         console.log(testDeck.remainingCards());
+         console.log(`Deck remaining cards: ${testDeck.remainingCards()}`);
          expect(testDeck.remainingCards()).to.deep.equal(52);
       });
 
       it('#Should contain 51 cards after dealCard is called', () => {
          testDeck.dealCard();
-         console.log(testDeck.remainingCards());
+         console.log(`Deck remaining cards: ${testDeck.remainingCards()}`);
          expect(testDeck.remainingCards()).to.deep.equal(51);
       });
 
       it('#Should contain 52 cards after resetDeck is called', () => {
          testDeck.resetDeck();
-         console.log(testDeck.remainingCards());
+         console.log(`Deck remaining cards: ${testDeck.remainingCards()}`);
          expect(testDeck.remainingCards()).to.deep.equal(52);
       });
    });
@@ -326,16 +326,19 @@ describe('Player Test Cases', () => {
    // Test Player Score Methods
    describe('Initialise Player and add points', () => {
       it('#Should initialise the player score to 0', () => {
+         console.log(`Player Score: ${testPlayer.getScore()}`);
          expect(testPlayer.getScore()).to.equal(0);
       });
 
       it('#Should add a point to score when addPoint called', () => {
          testPlayer.addPoint();
+         console.log(`Player Score: ${testPlayer.getScore()}`);
          expect(testPlayer.getScore()).to.equal(1);
       });
 
       it('#Should reset the player score to 0 when resetPlayer is called', () => {
          testPlayer.resetPlayer();
+         console.log(`Player Score: ${testPlayer.getScore()}`);
          expect(testPlayer.getScore()).to.equal(0);
       });
    });
@@ -343,16 +346,19 @@ describe('Player Test Cases', () => {
    describe('Draw a Card to players hand and then Play the Card', () => {
       // Test Player Card Methods
       it('#Should have 0 cards in hand when new Player is created', () => {
+         console.log(`Player remaining cards: ${testPlayer.remainingCards()}`);
          expect(testPlayer.remainingCards()).to.equal(0);
       });
 
       it('#Should have 1 card after calling drawCard', () => {
          testPlayer.drawCard(new Card('A', 'S', 14));
+         console.log(`Player remaining cards: ${testPlayer.remainingCards()}`);
          expect(testPlayer.remainingCards()).to.equal(1);
       });
 
       it('#Should have 0 cards after calling playCard', () => {
          testPlayer.playCard();
+         console.log(`Player remaining cards: ${testPlayer.remainingCards()}`);
          expect(testPlayer.remainingCards()).to.equal(0);
       });
    });
